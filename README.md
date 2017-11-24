@@ -31,3 +31,6 @@ We have a graph **g**.
 *BFS -> think about queues*  
 
 ## DFS
+
+*Think recursively*  
+
