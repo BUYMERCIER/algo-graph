@@ -130,12 +130,12 @@ def dfs(g, v, parents):
     print(v)
     # v = None
     for s in g.adjlists:
-        if not parents[s]:
+        if parents[s] is None:
             parents[s] = v
             dfs(g, s, parents)
-        # else:
-            # (v,s) backward egde
-
+        else:
+            if parents[v] != s:
+                print(v, '--', s, 'is a backward edge')
 
 
 
