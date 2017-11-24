@@ -40,4 +40,63 @@ def todot_mat(g):
     out = ('di' * g.directed) + 'graph {\n'
     lnk = ' -> ' if g.directed else ' -- '
     for v in range(g.order):
-        or s in range(g.order if ):
+        for s in range(g.order if ):
+            pass
+            # didn't finish
+
+
+####################
+#                  #
+#    TRAVERSALS    #
+#                  #
+####################
+
+# 2.1 BFS
+# think about BFS -> think about QUEUES
+
+from algopy.queues import *
+
+def __bfs(g, src, parents):
+    """
+    g = the graph
+    src = vertex we want to start with
+    parents = a list of all the nodes and their parents
+    """
+    q = Queue()
+    q.enqueue(src)
+    while not q.isempty():
+        cur = q.dequeue()
+        for succ in g.adjlists[cur]:
+            if parents[succ] is None:
+                parents[succ] = cur
+                q.enqueue(succ)
+
+def breadth_first_full_traversal(g, src=0):
+    parents = [None] * g.order
+    parents[src] = -1
+    __bfs(g, src, parents)
+    for v in range(g.order):
+        if parents[v] is None:
+            parents[v] = -1
+            __bfs(g, v, parents)
+    return parents
+
+################
+#              #
+#      DFS     #
+#              #
+################
+
+def dfs(g, v):
+    # mark v
+    for s in g.adjlists:   
+        pass
+
+
+
+
+
+
+
+
+

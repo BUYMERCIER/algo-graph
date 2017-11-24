@@ -22,4 +22,12 @@ We have a graph **g**.
 
 **g.order** (the order of the graph - the number of vertices)  
 **g.directed** (boolean: True if directed False if undirected)  
-**g.adj** ()  
+**g.adj** () 
+
+# Traversals
+
+## BFS 
+
+*BFS -> think about queues*  
+
+## DFS
