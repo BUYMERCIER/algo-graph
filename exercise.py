@@ -23,8 +23,6 @@ def graph_half_degree(g):
     ind, outd = 0, 0
     
 
-print("done")
-
 # Exercise 1.5 (graphs)
 
 def todot(g):
@@ -137,7 +135,72 @@ def dfs(g, v, parents):
             if parents[v] != s:
                 print(v, '--', s, 'is a backward edge')
 
+# discovery edge: classical edge, from top to bottom only 1 level
+# cross edges: right to left (tree to another tree or 2 different branches)
+# back edges: they go bottom to top
+# forward edge: they do down and jump at least 2 levels
+
+def __dfs_dir(g, u, parents, pre, post, count):
+    """
+    g: object Graph
+    u: node (int)
+    parents: list of nodes (list of int)
+    pre: list of int
+    post: list of int
+    count: int (counter)
+    """
+    count += 1
+    pre[u] = count
+    for v in g.adjlists[u]:
+        # if parents[u]
+        pass
 
 
+##############
+#            #
+#  Shortest  #
+#    path    #
+#            #
+##############
 
+def find_path(g, src, dst):
+    parents = [None] * g.order
+    dist = [float('infinity')] * 
+    parents[src] = -1
+    dist[src] = 0
+    pass
 
+#######
+#######
+####### 
+#######
+
+def __isTree(g, v, parents):
+    count = 1
+    for s in range(g.order): 
+        if g.adj[v][s]:
+            if parents[s] = v
+                parents[s] = v
+                x= __isTree(g, s, parents)
+                if x == -1:
+                    return -1
+                count += x
+            elif parents[v] != s:
+                return -1
+    return count
+
+def isTree(g):
+    parents = [None] * g.order
+    parents[0] = -1
+    return __isTree(g, 0, parents) == g.order
+
+def __bfs_last(g, src, parents, dist):
+    q = Queue(à
+    q.enqueue(src)
+    last = src
+    while not q.isempty():
+        cur = q.dequeue()
+        last = cur
+        for succ in g.adjlists[cur]:
+            if parents[succ] is None:
+                pass

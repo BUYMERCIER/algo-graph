@@ -26,7 +26,7 @@ class GraphMat:
             order (int): Number of nodes.
             directed (bool): True if the graph is directed. False otherwise.
         """
-        
+ 
         self.order = order
         self.directed = directed
         self.adj = [[0 for j in range(order)] for i in range(order)]
