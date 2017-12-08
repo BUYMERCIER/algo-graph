@@ -16,7 +16,17 @@ Multiedge (several edges from a vertex to another)
 
 *if there are no self-loops or multiedges, it's called a simple graph*
 
-In a directed graph, the maximum number of edges is ```n * (n - 1)``` (n being the number of vertices)
+In a directed graph, the maximum number of edges is ```n * (n - 1)``` (n being the number of vertices). This is true if it is a simple graph.
+
+*Dense graph -> adjacency matrix*  
+*Spares graph -> adjacency list*  
+
+### Paths
+
+A walk (or path) is a sequence of vertices where each adjacent pair is connected by and edge.  
+A simple (elementary) path is a walk where no vertices are repeated.  
+
+**Strongly connected**: if there is a path from any vertex to any other vertex.
 
 # Implementations
 
