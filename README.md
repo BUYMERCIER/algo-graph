@@ -1,7 +1,7 @@
 # Recap
 
 A graph is a non-linear data structure.  
-It is a set of vertices (aka nodes) and a set of edges. G = (v,e)
+It is a set of vertices (aka nodes) and a set of edges. **G = (v,e)**
 
 Two main types of graphs:  
 - directed graph (digraph)
@@ -15,6 +15,8 @@ Self-loop (edge with same start and end points)
 Multiedge (several edges from a vertex to another)  
 
 *if there are no self-loops or multiedges, it's called a simple graph*
+
+In a directed graph, the maximum number of edges is ```n * (n - 1)``` (n being the number of vertices)
 
 # Implementations
 
