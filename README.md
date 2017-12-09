@@ -37,6 +37,8 @@ A graph with no cycle is called **acyclic**
 
 ## Adjacency list
 
+Good on memory, but bad on computation time.  
+
 ![Example](http://btechsmartclass.com/DS/images/Graph%20Adjacency%20List.jpg)
 
 ### Python implementation
@@ -54,6 +56,8 @@ We have a graph **g**.
 ## Adjacency matrix
 
 We can store the graph in a ```v * v``` matrix (where v is the number of vertices of the graph).  
+Good on computation time, but bad on memory.
+  
 ![Example](http://btechsmartclass.com/DS/images/Graph%20Adjacency%20Matrix%201.jpg)
 
 For an undirected graph, this matrix is symmetric.  
