@@ -71,7 +71,7 @@ We have a graph **g**.
 **g.directed** (boolean: True if directed False if undirected)  
 **g.adjlists** (a list of lists - index 0 is the list if outgoing links from 0 to the elements of the list)
 
-Attributes:  
+Attributes:
 * order (int): Number of vertices.
 * directed (bool): True if the graph is directed. False otherwise.
 * adjlists (List[List[int]]): Lists of connected vertices for each vertex.
