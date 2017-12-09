@@ -49,14 +49,6 @@ class Graph:
     """
 
     def __init__(self, order, directed=False):
-        """Init graph, allocate adjacency lists
-
-        Args:
-            order (int): Number of nodes.
-            directed (bool): True if the graph is directed. False otherwise.
-
-        """
-
         self.order = order
         self.directed = directed
         self.adjlists = []
@@ -96,7 +88,23 @@ For an undirected graph, this matrix is symmetric.
 ### Python implementation
 
 ```python
-class GraphMat
+class GraphMat:
+    """ Simple class for static graph.
+    """
+
+    def __init__(self, order, directed=False): 
+        self.order = order
+        self.directed = directed
+        self.adj = [[0 for j in range(order)] for i in range(order)]
+
+    def addedge(self, src, dst):
+        if src < 0 or src >= self.order:
+            raise IndexError("invalid src index")
+        if dst < 0 or dst >= self.order:
+            raise IndexError("invalid dst index")
+        self.adj[src][dst] += 1
+        if not self.directed and src != dst:
+            self.adj[dst][src] += 1
 ```
 
 We have a graph **g**.
