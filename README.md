@@ -16,7 +16,9 @@ Multiedge (several edges from a vertex to another)
 
 *if there are no self-loops or multiedges, it's called a simple graph*
 
-In a directed graph, the maximum number of edges is ```n * (n - 1)``` (n being the number of vertices). This is true if it is a simple graph.
+In a directed graph, the maximum number of edges is ```n * (n - 1)``` (n being the number of vertices). This is true if it is a simple graph.  
+In an undirected graph, the max number of edges is ```n * (n - 1) / 2```  
+
 
 *Dense graph -> adjacency matrix*  
 *Spares graph -> adjacency list*  
@@ -28,11 +30,14 @@ A simple (elementary) path is a walk where no vertices are repeated.
 
 **Strongly connected**: if there is a path from any vertex to any other vertex.
 
+A cycle starts and ends at the same vertex and no edge/vertex is repeated.  
+A graph with no cycle is called **acyclic**
+
 # Implementations
 
-## Graph (adjlists)
+## Adjacency list
 
-```
+```python
 class Graph
 ```  
 
@@ -42,9 +47,9 @@ We have a graph **g**.
 **g.directed** (boolean: True if directed False if undirected)  
 **g.adjlists** (a list of lists - index 0 is the list if outgoing links from 0 to the elements of the list)
 
-## GraphMat
+## Adjacency matrix
 
-```
+```python
 class GraphMat
 ```
 
