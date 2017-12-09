@@ -37,6 +37,8 @@ A graph with no cycle is called **acyclic**
 
 ## Adjacency list
 
+![Example](http://btechsmartclass.com/DS/images/Graph%20Adjacency%20List.jpg)
+
 ```python
 class Graph
 ```  
