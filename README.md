@@ -49,6 +49,9 @@ We have a graph **g**.
 
 ## Adjacency matrix
 
+We can store the graph in a ```v * v``` matrix (where v is the number of vertices of the graph).  
+![Example](http://btechsmartclass.com/DS/images/Graph%20Adjacency%20Matrix%201.jpg)
+
 ```python
 class GraphMat
 ```
