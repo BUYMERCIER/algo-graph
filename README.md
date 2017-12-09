@@ -44,7 +44,33 @@ Good on memory, but bad on computation time.
 ### Python implementation
 
 ```python
-class Graph
+class Graph:
+    """ Simple class for graph: adjacency lists
+    """
+
+    def __init__(self, order, directed=False):
+        """Init graph, allocate adjacency lists
+
+        Args:
+            order (int): Number of nodes.
+            directed (bool): True if the graph is directed. False otherwise.
+
+        """
+
+        self.order = order
+        self.directed = directed
+        self.adjlists = []
+        for _ in range(order):
+            self.adjlists.append([])
+
+    def addedge(self, src, dst):
+        if src < 0 or src >= self.order:
+            raise IndexError("invalid src index")
+        if dst < 0 or dst >= self.order:
+            raise IndexError("invalid dst index")
+        self.adjlists[src].append(dst)
+        if not self.directed and src != dst:
+            self.adjlists[dst].append(src)
 ```  
 
 We have a graph **g**.  
@@ -52,6 +78,11 @@ We have a graph **g**.
 **g.order** (the order of the graph - the number of vertices)  
 **g.directed** (boolean: True if directed False if undirected)  
 **g.adjlists** (a list of lists - index 0 is the list if outgoing links from 0 to the elements of the list)
+
+Attributes:  
+* order (int): Number of vertices.
+* directed (bool): True if the graph is directed. False otherwise.
+* adjlists (List[List[int]]): Lists of connected vertices for each vertex.
 
 ## Adjacency matrix
 
