@@ -119,6 +119,45 @@ We have a graph **g**.
 
 *BFS -> think about queues*  
 
+```python
+from algopy.queues import *
+
+# hat function
+def bfs(g, src=0):
+    parents = [None] * g.order
+    parents[src] = -
+    _bfs(g, src, parents) # the actual BFS
+    for v in range(g.order):
+        if parents[v] is None:
+            parents[v] = -1
+            _bfs(g, v, parents)
+    return parents
+
+# ajacency list
+def _bfs(g, src, parents):
+    q = Queue()
+    q.enqueue(src)
+    while !q.isempty():
+        cur = q.dequeue
+        for s in g.adjlists[cur]:
+            if parents[s] is None:
+                parents[s] = cur
+                q.enqueue(s)
+
+# adjacency matrix
+def _bfs_mat(g, src, parents):
+    q = Queue()
+    q.enqueue(src)
+    while not q.isempty():
+        cur = q.dequeue()
+        #for succ in g.adjlists[cur]:
+        for succ in range(g.order):
+            if g.adj[cur][succ]:
+                if parents[succ] is None:
+                    parents[succ] = cur
+                    q.enqueue(succ)
+```
+
 ## DFS
 
 *Think recursively*  
