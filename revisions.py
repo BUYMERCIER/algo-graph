@@ -79,7 +79,7 @@ def bfs(g, src=0):
 def _bfs(g, src, parents):
 	q = Queue()
 	q.enqueue(src)
-	while !q.isempty():
+	while not q.isempty():
 		cur = q.dequeue
 		for s in g.adjlists[cur]:
 			if parents[s] is None:
