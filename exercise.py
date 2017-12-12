@@ -1,4 +1,7 @@
-# from algopy.graph import *
+#
+# exercise.py
+#
+
 from algopy.graphmat import *
 
 def buildFromFile(path):
@@ -127,7 +130,7 @@ def bfs_all_options(g, src=None, full=False):
 def dfs(g, v, parents):
     print(v)
     # v = None
-    for s in g.adjlists:
+    for s in g.adjlists[v]:
         if parents[s] is None:
             parents[s] = v
             dfs(g, s, parents)

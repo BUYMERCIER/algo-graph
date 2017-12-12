@@ -123,3 +123,7 @@ We have a graph **g**.
 
 *Think recursively*  
 
+# Appendix
+
+![graph](https://image.noelshack.com/fichiers/2017/50/1/1513003916-tuto-graph22.png)
+![digraph](https://image.noelshack.com/fichiers/2017/50/1/1513003917-tuto-digraph12.png)
