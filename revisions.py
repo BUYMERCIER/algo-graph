@@ -100,7 +100,7 @@ def _bfs_mat(g, src, parents):
                     q.enqueue(succ)
 
 # Exercise 2.2
-### 3. DFS unidrected
+### 3. DFS
 
 # adjacency matrix
 def dfs(g, src=0):
@@ -113,6 +113,9 @@ def dfs(g, src=0):
 			_dfs(g, src, parents)
 	return parents
 
+# undirected
+## encontered edges: discovery and backward
+
 def _dfs_undir(g, src, parents):
 	# print(src)
 	for s in g.adjlists[src]:
@@ -121,17 +124,27 @@ def _dfs_undir(g, src, parents):
 			_dfs_undir(g, s, parents)
 		else:
 			if parents[s] != s:
-				print(s, '--', s, 'is a backward edge')
+				print(s, '--', src, 'is a backward edge')
 	# print(src)
 
+# directed
+## encontered edges: discovery, backward, cross and forward
+
 def _dfs_dir(g, src, parents):
-	pass
+	# preorder stuff
+	for v in g.adjlists(src):
+		if parent(v) is None:
+			parents(v) = src
+			_dfs_dir(g, v, parents)
+		else:
+			if parents(src) != v:
+				print(v, ' -- ', src, 'is a backward edge')
 
 
 ######################
-#	    			 #
-#  	  Application	 #
-#					 #
+#                    #
+#     Application    #
+#                    #
 ######################
 
 # Exercise 3.1

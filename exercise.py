@@ -129,7 +129,6 @@ def bfs_all_options(g, src=None, full=False):
 
 def dfs(g, v, parents):
     print(v)
-    # v = None
     for s in g.adjlists[v]:
         if parents[s] is None:
             parents[s] = v
@@ -182,9 +181,9 @@ def __isTree(g, v, parents):
     count = 1
     for s in range(g.order): 
         if g.adj[v][s]:
-            if parents[s] = v
+            if parents[s] = v:
                 parents[s] = v
-                x= __isTree(g, s, parents)
+                x = __isTree(g, s, parents)
                 if x == -1:
                     return -1
                 count += x
@@ -198,7 +197,7 @@ def isTree(g):
     return __isTree(g, 0, parents) == g.order
 
 def __bfs_last(g, src, parents, dist):
-    q = Queue(à
+    q = Queue()
     q.enqueue(src)
     last = src
     while not q.isempty():

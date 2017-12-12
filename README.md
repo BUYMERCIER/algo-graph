@@ -123,6 +123,28 @@ We have a graph **g**.
 
 *Think recursively*  
 
+### Preorder and postorder properties
+
+An edge u->v is:
+- discovery if: pre[u] < pre[v] < post[v] < post[u]
+- forward if: pre[u] < pre[v] < post[v] < post[u]
+- backward if: pre[v] < pre[u] < post[u] < post[v]
+- cross if: pre[v] < post[v] < pre[u] < post[u]
+
+## How to represent spanning forests
+
+### Static case
+
+- DFS
+- BFS
+- Transitive closure
+
+### Evolutive case
+
+- Parents list
+- Union by rank
+- Path compression
+
 # Appendix
 
 ![graph](https://image.noelshack.com/fichiers/2017/50/1/1513003916-tuto-graph22.png)
