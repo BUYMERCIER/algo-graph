@@ -67,7 +67,7 @@ from algopy.queues import *
 # hat function
 def bfs(g, src=0):
 	parents = [None] * g.order
-	parents[src] = -
+	parents[src] = -1
 	_bfs(g, src, parents) # the actual BFS
 	for v in range(g.order):
 		if parents[v] is None:
@@ -165,6 +165,17 @@ def path(g, src, dst):
 			i -= 1
 			dst = parents[dst]
 		path[0] = src
+
+
+
+
+
+
+
+
+
+
+
 
 
 
